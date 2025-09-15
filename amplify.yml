@@ -1,0 +1,13 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands: []
+    build:
+      commands: []   # no build step
+  artifacts:
+    baseDirectory: /   # publish files from repo root
+    files:
+      - '**/*'
+  cache:
+    paths: []
