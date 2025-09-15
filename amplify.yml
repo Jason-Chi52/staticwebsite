@@ -1,18 +1,13 @@
 version: 1
-applications:
-  - appRoot: site            # <— change to your folder
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist  # Vite=dist, CRA=build, Next export=out
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
+frontend:
+  phases:
+    preBuild:
+      commands: []
+    build:
+      commands: []        # no build step
+  artifacts:
+    baseDirectory: /      # <— publish from repo root (where index.html is)
+    files:
+      - '**/*'
+  cache:
+    paths: []
